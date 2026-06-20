@@ -46,12 +46,6 @@ body{
 .card img{
     width : 100%;
 }
-.card{
-    text-align: center;
-}
-
 .card button{
-    margin-top: 15px;
-    padding: 10px 20px;
-    cursor: pointer;
+    margin-bottom: 20px;
 }

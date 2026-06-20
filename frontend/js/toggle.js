@@ -1,19 +1,30 @@
-let isMale = true;
-
-function toggleUser() {
-    const name = document.getElementById("userName");
-    const gender = document.getElementById("userGender");
-    const image = document.getElementById("userImage");
-
-    if (isMale) {
-        name.textContent = "Jane Doe";
-        gender.textContent = "Female";
-        image.src = "../images/jane.png";
-    } else {
-        name.textContent = "John Doe";
-        gender.textContent = "Male";
-        image.src = "../images/john.png";
+var users = [
+    {
+        "name" : "john Doe",
+        "gender" : "Male",
+        "image" : "/images/john.png",
+    },
+    {
+        "name" : "jane Doe",
+        "gender" : "Female",
+        "image" : "/images/jane.png",
     }
 
-    isMale = !isMale;
+]
+
+var curId = 0;
+
+function toggle(){
+    //toggle curId from 0->1 & 1->0
+    curId = (curId+1)%2;
+
+    //toggle the rendered user details
+    //image
+    var user = users[curId];
+    document.getElementById("user-img").src = user.image;
+    //name 
+    document.getElementById("user-name").innerText = user.name;
+    //gender
+     document.getElementById("user-gender").innerText = user.gender;
+     
 }
