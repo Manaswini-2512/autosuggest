@@ -1,33 +1,117 @@
+/* Reset */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family: "Segoe UI", sans-serif;
+    background:#f8fafc;
+    color:#222;
+    min-height:100vh;
+}
+
+/* Top Icons */
 .gear{
-    position : fixed ;
-    top : 10px;
-    left : 10px;
+    position:fixed;
+    top:20px;
+    left:20px;
+    font-size:22px;
+    cursor:pointer;
+    color:#555;
 }
+
 .pill{
-    position: fixed;
-    top : 10px;
-    right : 10px;
+    position:fixed;
+    top:20px;
+    right:20px;
+    padding:8px 14px;
+    border-radius:20px;
+    background:white;
+    box-shadow:0 2px 10px rgba(0,0,0,.08);
+    font-size:14px;
 }
-.main-content{
-    text-align: center;
-}
+
 .online{
-    color: aquamarine;
+    color:#22c55e;
 }
+
+/* Center Content */
+.main-content{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    margin-top:120px;
+}
+
+.main-content h1{
+    font-size:52px;
+    margin-bottom:10px;
+    font-weight:700;
+}
+
 .half{
-    color: blue;
+    color:#2563eb;
 }
 
+.main-content p{
+    color:#64748b;
+    margin-bottom:30px;
+    font-size:16px;
+}
 
+/* Search Container */
+.search{
+    position:relative;
+    width:500px;
+    max-width:90%;
+}
+
+/* Search Icon */
+.icon{
+    position:absolute;
+    left:18px;
+    top:50%;
+    transform:translateY(-50%);
+    color:#64748b;
+    font-size:18px;
+}
+
+/* Search Input */
 .searchbox{
-    padding-left: 30px;
-    padding-right : 40px;
-    padding-top : 10px;
-    padding-bottom : 10px;
-  border-radius: 20px;
-}
-.icon {
- position : relative;
- left : 30px;
+    width:100%;
+    padding:15px 20px 15px 50px;
+    border:1px solid #ccc;
+    border-radius:50px;
+    outline:none;
+    font-size:16px;
+    background:white;
 }
 
+.searchbox:focus{
+    outline:none;
+    border:1px solid #ccc;
+    box-shadow:none;
+}
+/* Suggestions */
+#search-suggestions{
+    width:500px;
+    max-width:90%;
+    margin:25px auto 0;
+    background:white;
+    border-radius:12px;
+    overflow:hidden;
+}
+
+#search-suggestions div{
+    padding:12px 16px;
+    cursor:pointer;
+    border-bottom:1px solid #f1f5f9;
+    transition:0.2s;
+}
+
+#search-suggestions div:hover{
+    background:#f5f5f5;
+}
